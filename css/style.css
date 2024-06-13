@@ -6,3 +6,43 @@
 }
 
 /* ********************REGOLE MAIN************************ */
+main{
+    background-color: black;
+    padding: 50px;
+    height: 100vh;
+}
+
+
+.cont_grid{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.bord{
+    border: 3px solid white;
+}
+
+.col10{
+    width: 10%;
+    height: 10%;
+    
+}
+
+.col9{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    
+}
+
+.col7{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+.clicked{
+    background-color: aqua;
+}
