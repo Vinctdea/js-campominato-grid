@@ -12,18 +12,34 @@ main{
     height: 100vh;
 }
 
+.btn{
+    background-color: rgb(143, 221, 221);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    height: fit-content;
+    text-align: center;
+    cursor: pointer;
 
-.cont_grid{
+}
+
+.cont_grid, .container_box{
     width: 600px;
     height: 600px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     
 }
 
 .bord{
     border: 3px solid white;
+}
+
+.none{
+    display: none;
 }
 
 .col10{
@@ -45,4 +61,12 @@ main{
 
 .clicked{
     background-color: aqua;
+}
+
+/*******regole form*********/
+form{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
 }
