@@ -3,8 +3,45 @@
 // Ogni cella ha un numero progressivo, da 1 a 100.
 // Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
-// Bonus
-// Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà:
-// - con difficoltà 1 => 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe;
-// - con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
-// - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
+
+// selezione difficolta e start al click
+const level = document.getElementById("level");
+const start = document.querySelector(".btn");
+const form = document.querySelector("form");
+const container = document.querySelector(".container_box");
+
+// click genera livello
+start.addEventListener("click",
+    function(){
+        form.classList.add("none");
+        let valoreLevel = parseInt(level.value);
+        console.log(valoreLevel);
+        container.classList.remove("none");
+        let colonna;
+        if (valoreLevel===100) {
+            colonna="col10"
+        }else if(valoreLevel===81){
+            colonna="col9"
+        }else{
+            colonna="col7"
+        }
+        for (let i = 0; i < valoreLevel; i++) {
+
+            container.innerHTML += newElementClassN("div",colonna  + " bord");
+        }
+    }
+)
+
+
+
+
+
+// creo una funzione che genra elementi e classi
+function newElementClassN(elem, classe){
+        let newElem = `<${elem} class="${classe}"></${elem}>`
+        return newElem;
+    }
+
+
+
+
