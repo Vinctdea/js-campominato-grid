@@ -63,10 +63,17 @@ main{
     background-color: aqua;
 }
 
+.lock{
+    cursor: pointer;
+}
+
 /*******regole form*********/
 form{
     display: flex;
     justify-content: center;
     gap: 10px;
     font-size: 20px;
+    cursor: pointer;
 }
+
+

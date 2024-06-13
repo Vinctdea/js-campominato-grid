@@ -2,7 +2,6 @@
 // L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
 // Ogni cella ha un numero progressivo, da 1 a 100.
 // Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-// Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
 // selezione difficolta e start al click
 const level = document.getElementById("level");
@@ -27,10 +26,22 @@ start.addEventListener("click",
         }
         for (let i = 0; i < valoreLevel; i++) {
 
-            container.innerHTML += newElementClassN("div",colonna  + " bord");
+            container.innerHTML += newElementClassN("div", colonna + " bord" + " lock");
         }
+
+        // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+        const celle = document.querySelector(".lock");
+        celle.addEventListener("click",
+            function(){
+                console.log(celle);
+            celle.classList.toggle("clicked");
     }
-)
+);
+    }
+);
+
+
+
 
 
 
