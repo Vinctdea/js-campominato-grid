@@ -36,7 +36,7 @@ start.addEventListener("click",
             const lockIesimo = lock[i];
             lockIesimo.addEventListener("click",
                 function () {
-                    lockIesimo.classList.toggle("clicked");
+                    lockIesimo.classList.add("clicked");
                     console.log();
                 }
             )
