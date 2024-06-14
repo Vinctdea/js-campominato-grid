@@ -48,6 +48,7 @@ main{
     width: 10%;
     height: 10%;
     
+    
 }
 
 .col9{
@@ -67,6 +68,9 @@ main{
 
 .lock{
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*******regole form*********/

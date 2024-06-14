@@ -31,13 +31,18 @@ start.addEventListener("click",
 
         
         // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
-        const lock = document.querySelector(".lock")
-        lock.addEventListener("click",
-            function () {
-                lock.classList.toggle("clicked");
-                console.log();
-            }
-        )
+        const lock = document.querySelectorAll(".lock")
+        for (let i = 0; i < lock.length; i++) {
+            const lockIesimo = lock[i];
+            lockIesimo.addEventListener("click",
+                function () {
+                    lockIesimo.classList.toggle("clicked");
+                    console.log();
+                }
+            )
+            
+        }
+        
             
     }   
    
