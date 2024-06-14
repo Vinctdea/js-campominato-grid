@@ -7,7 +7,7 @@
 const level = document.getElementById("level");
 const start = document.querySelector(".btn");
 const form = document.querySelector("form");
-const container = document.querySelector(".container_box");
+const container = document.querySelector(".cont_grid");
 
 // click genera livello
 start.addEventListener("click",
@@ -24,23 +24,37 @@ start.addEventListener("click",
         }else{
             colonna="col7"
         }
-        for (let i = 0; i < valoreLevel; i++) {
+        for (let i = 1; i <= valoreLevel; i++) {
+            container.innerHTML += newElementClassN("div", colonna + " bord" + " lock" , i);
+              
+        } 
 
-            container.innerHTML += newElementClassN("div", colonna + " bord" + " lock");
-        }
-
+        
         // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
-        const celle = document.querySelector(".lock");
-        celle.addEventListener("click",
-            function(){
-                console.log(celle);
-            celle.classList.toggle("clicked");
-    }
-);
-    }
-);
+        const lock = document.querySelector(".lock")
+        lock.addEventListener("click",
+            function () {
+                lock.classList.toggle("clicked");
+                console.log();
+            }
+        )
+            
+    }   
+   
+);                                       
 
 
+
+
+
+
+    
+
+
+    
+
+    
+ 
 
 
 
@@ -48,8 +62,8 @@ start.addEventListener("click",
 
 
 // creo una funzione che genra elementi e classi
-function newElementClassN(elem, classe){
-        let newElem = `<${elem} class="${classe}"></${elem}>`
+function newElementClassN(elem, classe, text){
+        let newElem = `<${elem} class="${classe}">${text}</${elem}>`
         return newElem;
     }
 
